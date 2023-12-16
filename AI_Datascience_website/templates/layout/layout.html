@@ -62,12 +62,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a   href="{% url 'main:dashboard'%}" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'main:about'%}" class="nav-item nav-link">About Us </a>
-                        <a href="{% url 'main:events'%}"class="nav-item nav-link">Events</a>
-                        <a href="{% url 'main:projects'%}" class="nav-item nav-link">Projects</a>
+                        <a   href="{% url 'main:dashboard'%}" class="nav-item nav-link {% if activedash %}active {%endif%}">Home</a>
+                        <a href="{% url 'main:about'%}" class="nav-item nav-link {% if activeabout %}active {%endif%}">About Us </a>
+                        <a href="{% url 'main:events'%}"class="nav-item nav-link {% if activeevent %}active {%endif%}">Events</a>
+                        <a href="{% url 'main:projects'%}" class="nav-item nav-link {% if activeproject %}active {%endif%}">Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Explore</a>
+                            <a href="#" class="nav-link dropdown-toggle {% if activeexplore%}active {%endif%}" data-bs-toggle="dropdown">Explore</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <!--
                                       <a href="{% url 'main:team'%}" class="dropdown-item">Blog</a>
@@ -79,7 +79,7 @@
                                 
                             </div>
                         </div>
-                        <a href="{% url 'main:contact_us'%}" class="nav-item nav-link">Contact Us </a>
+                        <a href="{% url 'main:contact_us'%}" class="nav-item nav-link {% if activecontact%}active {%endif%}">Contact Us </a>
                     </div>
                     
                 </div>

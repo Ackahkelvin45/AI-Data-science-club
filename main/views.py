@@ -3,26 +3,51 @@ from django.shortcuts import render
 # Create your views here.
 
 def showdasboard(request):
-    return render(request,'main/dashboard.html')
+    context = {
+        "activedash":True
+    }
+    return render(request,'main/dashboard.html',context)
 
 def showabout(request):
-    return render(request, 'main/about_us.html')
+    context = {
+        "activeabout":True
+    }
+    return render(request, 'main/about_us.html',context)
     
 
 def showproject(request):
-    return render(request, 'main/projects.html')
+    context = {
+        "activeproject":True
+    }
+    return render(request, 'main/projects.html',context)
+    
     
 def showevents(request):
-    return render(request, 'main/events.html')
+    context = {
+        "activeevent":True
+    }
+    return render(request, 'main/events.html',context)
     
 
     
 def showcontact(request):
-    return render(request, 'main/contact_us.html')
+    context = {
+        "activecontact":True
+    }
+    return render(request, 'main/contact_us.html',context)
     
 
 def showteam(request):
-    return render(request, 'main/ourteam.html')
+    context = {
+        "activeteam":True
+    }
+    return render(request, 'main/ourteam.html',context)
     
 def showfaq(request):
-    return render(request,'main/faq.html')
+    context = {
+        "activeexplore":True
+    }
+    return render(request, 'main/faq.html', context)
+    
+def show404(request, exception):
+    return render (request,'main/404.html',status=404)

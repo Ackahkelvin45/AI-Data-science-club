@@ -51,3 +51,7 @@ def showfaq(request):
     
 def show404(request, exception):
     return render (request,'main/404.html',status=404)
+
+
+def showBlog(request):
+    return render (request,'main/blog.html')

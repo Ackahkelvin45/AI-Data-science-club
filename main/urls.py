@@ -12,5 +12,6 @@ urlpatterns = [
     path("upcoming_events/", views.showevents, name="events"),
     path("contact_us/", views.showcontact, name="contact_us"),
     path("team/", views.showteam, name="team"),
+    path("blog/", views.showBlog, name="blog"),
     path("faq/",views.showfaq,name="faq"),
 ]

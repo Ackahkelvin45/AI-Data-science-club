@@ -64,7 +64,19 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a   href="{% url 'main:dashboard'%}" class="nav-item nav-link {% if activedash %}active {%endif%}">Home</a>
-                        <a href="{% url 'main:about'%}" class="nav-item nav-link {% if activeabout %}active {%endif%}">About Us </a>
+                       
+                           <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle {% if activeabout %}active {%endif%}" data-bs-toggle="dropdown">About Us</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                
+                                      <a href="{% url 'main:presidents_corner'%}" class="dropdown-item">Presidents Corner</a>
+                                <a  href="{% url 'main:about'%}"class="dropdown-item">Mission and Vision</a>
+                                <a href="{% url 'main:team' %}" class="dropdown-item">Our Team</a>
+                              
+                               
+                                
+                            </div>
+                        </div>
                         <a href="{% url 'main:events'%}"class="nav-item nav-link {% if activeevent %}active {%endif%}">Events</a>
                         <a href="{% url 'main:projects'%}" class="nav-item nav-link {% if activeproject %}active {%endif%}">Projects</a>
                         <div class="nav-item dropdown">

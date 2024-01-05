@@ -1,0 +1,70 @@
+{%extends 'layout/layout.html'%}
+{%load static%}
+{% block body%}
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">President's Message</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'main:dashboard'%}">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Presiden't corner</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="{% static 'img/hero-img.png' %}" alt="" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Full Screen Search End -->
+
+
+       <!-- About Start -->
+       <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">President's Remarks</div>
+                    <h1 class="mb-4">Overview</h1>
+                  
+                </div>
+                <div class="col-lg-9 wow fadeIn" data-wow-delay="0.5s">
+                    <div class=" border-start border-primary">
+                       
+                     
+                        <div class="testimonial-item ps-5">
+                            <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                            <p class="fs-6">
+                                <h4>*Join the KNUST AI/Data Science Club: Igniting Innovation, Transforming Futures!*</h4>
+
+Welcome to the beating heart of data-driven exploration at KNUST!  The AI/Data Science Club isn't just a club; it's a dynamic community fueled by curiosity, innovation, and a shared passion for AI and data science.
+We're on a mission to create a vibrant ecosystem where data enthusiasts collaborate, learn, and innovate. Our workshops, seminars, and hands-on projects aren't just educational endeavors; they're pathways to shaping the future of technology and research at KNUST.
+
+                            </p>
+                            <i class="fa fa-quote-right fa-2x text-primary mb-3"></i>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/co-president.jpg' %}"
+                                    style="width: 100px; height: 100px;" >
+                                <div class="ps-3">
+                                    <h5 class="mb-1">Owusuaa Nana Ama Fobi</h5>
+                                    <span>Co-President</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- About End -->
+
+{%endblock%}

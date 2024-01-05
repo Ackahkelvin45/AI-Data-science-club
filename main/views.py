@@ -39,9 +39,15 @@ def showcontact(request):
 
 def showteam(request):
     context = {
-        "activeteam":True
+        "activeabout":True
     }
     return render(request, 'main/ourteam.html',context)
+
+def showpresidents_corner(request):
+    context = {
+        "activeabout":True
+    }
+    return render(request, 'main/presidents_corner.html',context)
     
 def showfaq(request):
     context = {
